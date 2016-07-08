@@ -5,6 +5,7 @@
 		<h1><%= job.title %></h1> 
 		<p><%= job.company %></p> 
 		<p><%= job.location %></p>
+		<strong><%= 'Destaque' if job.featured? %></strong>
 	</div>
 	<% end %>
 </section>
