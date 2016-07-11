@@ -1,4 +1,6 @@
 <section>
+	<%= link_to "Criar Vagas", new_job_path %>
+	<%= link_to "Criar Empresas", new_company_path %>
 	<%@jobs.each do |job|%>
 	<div>
 		<%= link_to job.title, job %>
