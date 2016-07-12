@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Job, :type => :model do
+describe Job do
   it 'should be valid' do
     job = Job.create()
     expect(job).not_to be_valid
