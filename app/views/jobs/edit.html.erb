@@ -1,31 +1,4 @@
 <section>
 	<h1>Editar uma vaga</h1>
-	<%= form_for @job do |f| %>
-		<div>
-			<%=f.label :title, 'Título'%>:
-			<%=f.text_field :title%> 
-		</div>
-		<div>
-			<%=f.label :location, 'Local'%>:
-			<%=f.text_field :location%> 
-		</div>
-		<div>
-			<%=f.label :category, 'Categoria'%>:
-			<%=f.text_field :category%> 
-		</div>
-		<div>
-			<%=f.label :company_id, 'Empresa'%>:
-			<%= f.collection_select(:company_id, Company.all, :id, :name) %>
-		</div>
-		<div>
-			<%=f.label :description, 'Descrição'%>:
-			<%=f.text_field :description%> 
-		</div>
-		<div>
-			<%= f.label :featured, 'Destaque' %>
-			<%= f.check_box :featured %>
-		</div>
-		<%=f.submit('Atualizar Vaga') %>
-		<p><%= flash[:notice] %></p>
-	<% end %>
+	<%= render partial: 'form', locals: {submit_text: 'Atualizar Vaga'} %>
 </section>
