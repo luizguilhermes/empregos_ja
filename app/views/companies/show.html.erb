@@ -1,15 +1,11 @@
 <div>
-	<h1><%= @company.name %></h1>
-	<p><%= @company.location %></p>
-	<p><%= @company.mail %></p>
-	<p><%= @company.phone %></p>
+	<h1><%= @company.name %></h1></br>
+	<%= @company.location %></br>
+	<%= @company.mail %></br>
+	<%= @company.phone %></br>
 	<p><%= link_to 'Voltar', root_path %></p>
 </div>
 
 <div>
-	<% @jobs.each do |job| %>
-		<div><%= job.title %></div>
-		<%= job.category %>
-	<% end %>
-	
+	<%= render @jobs%>
 </div>

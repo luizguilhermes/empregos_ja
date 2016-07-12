@@ -1,24 +1,17 @@
-<section>
+<nav>
 	<p>
 		<%= link_to "Criar Vagas", new_job_path %>
 		<%= link_to "Criar Empresas", new_company_path %>
 	</p>
-
-	<% @companies.each do |company| %>
-		<%= link_to company.name, company %>
-	<% end %>
-
-	<%@jobs.each do |job|%>
+</nav>
+<aside>
 	<div>
-		<%= link_to job.title, job %>
-		<h1><%= job.title %></h1> 
-		<p><%= job.company.name %></p> 
-		<p><%= job.location %></p>
-		<p>
-			<% if job.featured? %>
-				<strong><%= 'Destaque' %></strong>
+			<% @companies.each do |company| %>
+				<%= link_to company.name, company %></br>
 			<% end %>
-		</p>
 	</div>
-	<% end %>
+</aside>
+
+<section>
+		<%= render @jobs%>
 </section>
