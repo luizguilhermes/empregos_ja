@@ -1,17 +1,33 @@
-<nav>
-	<p>
-		<%= link_to "Criar Vagas", new_job_path %>
-		<%= link_to "Criar Empresas", new_company_path %>
-	</p>
-</nav>
-<aside>
-	<div>
-			<% @companies.each do |company| %>
-				<%= link_to company.name, company %></br>
-			<% end %>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<ul class="nav navbar-nav">
+				<li><%= link_to "Criar Vagas", new_job_path %></li>
+				<li><%= link_to "Criar Empresas", new_company_path %></li>
+			</ul>
+		</div>
 	</div>
-</aside>
+</nav>
 
-<section>
-		<%= render @jobs%>
-</section>
+<div class="row">
+	<div class="col-md-3">
+		<aside>
+			<div>
+					<% @companies.each do |company| %>
+						<%= link_to company.name, company %></br>
+					<% end %>
+			</div>
+		</aside>
+	</div>
+	<div class="col-md-9">
+		<section>
+			<div class="row">
+					<% @jobs.each do |job| %>
+						<div class="col-md-6">
+							<%= render job%>
+						</div>
+					<% end %>
+			</div>
+		</section>
+	</div>
+</div>
