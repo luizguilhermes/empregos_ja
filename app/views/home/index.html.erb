@@ -13,20 +13,27 @@
 	<div class="col-md-9">
 		<section>
 			<div class="row">
-					<% @jobs.each do |job| %>
-						<div class="col-md-6">
-							<%= render job%>
-						</div>
-					<% end %>
+				<% @jobs.each do |job| %>
+					<div class="col-md-6">
+						<%= render job%>
+					</div>
+				<% end %>
 			</div>
 		</section>
 	</div>
 	<div class="col-md-3">
 		<aside>
+			<h3>Empresas</h3>
 			<div>
-					<% @companies.each do |company| %>
-						<%= link_to company.name, company %></br>
-					<% end %>
+				<% @companies.each do |company| %>
+					<%= link_to company.name, company %></br>
+				<% end %>
+			</div>
+			<h3>Categorias</h3>
+			<div>
+				<% @categories.each do |category| %>
+					<%= link_to category.name, category%>
+				<% end %>
 			</div>
 		</aside>
 	</div>

@@ -1,11 +1,14 @@
 <div>
-	<h1><%= @company.name %></h1></br>
-	<%= @company.location %></br>
-	<%= @company.mail %></br>
-	<%= @company.phone %></br>
-	<p><%= link_to 'Voltar', root_path %></p>
+  <dl>
+    <dt><h1><%= @company.name %></h1></dt>
+    <dd><%= @company.location %></dd>
+  	<dd><%= @company.mail %></dd>
+  	<dd><%= @company.phone %></dd>
+  </dl>
 </div>
-
 <div>
 	<%= render @jobs%>
+</div>
+<div>
+  <br><%= link_to 'Voltar', root_path %>
 </div>

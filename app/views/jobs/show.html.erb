@@ -1,11 +1,15 @@
 <div>
-	<h1><%= @job.title %></h1></br>
-	<%= @job.category.name %></br>
-	<%= @job.company.name %></br>
-	<%= @job.description %></br>
-	<%= @job.location %></br>
+  <dl>
+    <dt><h1><%= @job.title %></h1></dt>
+    <dd><%= @job.category.name %></dd>
+    <dd><%= @job.company.name %></dd>
+    <dd><%= @job.description %></dd>
+    <dd><%= @job.location %></dd>
+  </dl>
 	<% if @job.featured? %>
 		<strong><%= 'Destaque' %></strong>
 	<% end %>
-	<p><%= link_to 'Voltar', root_path, class: "btn btn-default btn-lg active" %></p>
+</div>
+<div>
+  <%= link_to 'Voltar', root_path %>
 </div>
