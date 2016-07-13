@@ -10,15 +10,6 @@
 </nav>
 
 <div class="row">
-	<div class="col-md-3">
-		<aside>
-			<div>
-					<% @companies.each do |company| %>
-						<%= link_to company.name, company %></br>
-					<% end %>
-			</div>
-		</aside>
-	</div>
 	<div class="col-md-9">
 		<section>
 			<div class="row">
@@ -29,5 +20,14 @@
 					<% end %>
 			</div>
 		</section>
+	</div>
+	<div class="col-md-3">
+		<aside>
+			<div>
+					<% @companies.each do |company| %>
+						<%= link_to company.name, company %></br>
+					<% end %>
+			</div>
+		</aside>
 	</div>
 </div>
