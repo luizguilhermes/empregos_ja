@@ -1,4 +1,5 @@
 <div>
+  <%= image_tag 'estrela' if @company.premium? %>
   <dl>
     <dt><h1><%= @company.name %></h1></dt>
     <dd><%= @company.location %></dd>
