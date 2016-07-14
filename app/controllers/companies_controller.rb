@@ -14,9 +14,7 @@ class CompaniesController < ApplicationController
 
 	def create
 		@company = Company.new(company_params)
-		@company.save
-
-		if @company.valid?
+		if @company.save
 			redirect_to @company
 		else
 			render 'new'			

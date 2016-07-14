@@ -1,0 +1,14 @@
+<section>
+  <h1>Criar uma categoria</h1>
+  <%= form_for @category do |f| %>
+    <div class="form-group">
+      <%=f.label :name, 'Categoria'%>:
+      <%=f.text_field :name, class: 'form-control', placeholder: 'Nome da categoria' %> 
+    </div>
+    <div>
+      <%= link_to 'Voltar', root_path, class: 'btn btn-default' %>
+      <%= f.submit 'Criar Categoria', class: 'btn btn-default' %>
+    </div>
+  <% end %>
+
+</section>
