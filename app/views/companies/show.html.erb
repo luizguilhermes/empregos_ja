@@ -1,11 +1,15 @@
 <div>
   <%= image_tag 'estrela' if @company.premium? %>
+  <h1><%= @company.name %></h1>
   <dl>
-    <dt><h1><%= @company.name %></h1></dt>
-    <dd><%= @company.location %></dd>
-  	<dd><%= @company.mail %></dd>
-  	<dd><%= @company.phone %></dd>
+    <dt>Localização:</dt>
+    <dd> <%= @company.location %></dd>
+    <dt>Email:</dt>
+    <dd> <%= @company.mail %></dd>
+    <dt>Telefone:</dt>
+    <dd> <%= @company.phone %></dd>
   </dl>
+  <%= link_to 'Editar', edit_company_path, class: "btn btn-default" %>
 </div>
 <div>
 	<%= render @jobs%>

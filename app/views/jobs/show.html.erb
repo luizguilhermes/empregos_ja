@@ -9,6 +9,7 @@
 	<% if @job.featured? %>
 		<strong><%= 'Destaque' %></strong>
 	<% end %>
+  <%= link_to 'Editar', edit_job_path, class: "btn btn-default" %>
 </div>
 <div>
   <%= link_to 'Voltar', root_path, class: "btn btn-default" %>
